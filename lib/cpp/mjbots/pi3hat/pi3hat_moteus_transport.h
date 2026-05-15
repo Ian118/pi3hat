@@ -166,7 +166,7 @@ class Pi3HatMoteusTransport : public moteus::Transport {
   void CHILD_Cycle() {
     // We want to have room to receive frames even if we aren't
     // sending anything.
-    rx_can_.resize(std::max<size_t>(5, tx_can_.size() * 2));
+    rx_can_.resize(std::max<size_t>(13, tx_can_.size() * 2));
 
     // Now do our actual transaction.
     tx_can_.resize(cycle_data_.size);
